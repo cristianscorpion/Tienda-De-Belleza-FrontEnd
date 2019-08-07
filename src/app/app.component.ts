@@ -26,12 +26,16 @@ export class AppComponent implements OnInit{
       )
   }
 
-  guardarProducto(nombreProducto: HTMLInputElement, bodega: HTMLSelectElement) {
+  guardarProducto(nombreProducto: HTMLInputElement, bodega: HTMLSelectElement, precioProducto:HTMLInputElement, 
+        unidadesProducto:HTMLInputElement, tipoProducto:HTMLInputElement) {
     const producto: Producto = {
       codigoProducto: null,
       nombreProducto: nombreProducto.value,
       bodegaId: Number(bodega.value),
-      nombreBodega: null
+      nombreBodega: null,
+      precioProducto:precioProducto.value,
+      unidadesDisponibles:Number(unidadesProducto.value),
+      tipoProducto:tipoProducto.value
     };
     console.log(JSON.stringify(producto));
     this.productoService.saveProduct(producto)

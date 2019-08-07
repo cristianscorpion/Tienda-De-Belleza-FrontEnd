@@ -4,7 +4,7 @@
   
   <main>
     <mat-card>
-      <form (submit)="guardarProducto(nombreProducto, bodega)">
+      <form (submit)="guardarProducto(nombreProducto, bodega, precioProducto, unidadesProducto, tipoProducto)">
         <img width="500" alt="Angular Logo"
           src="http://www.comfenalcoantioquia.com/Portals/0/Imagenes/Educacion/edu_014.jpg">
         <mat-form-field>
@@ -16,6 +16,15 @@
               {{bodega.nombreBodega}}
             </mat-option>
           </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+          <input type="text" matInput placeholder="Precio producto" #precioProducto>
+        </mat-form-field>
+        <mat-form-field>
+          <input type="text" matInput placeholder="unidadesDisponibles" #unidadesProducto>
+        </mat-form-field>
+        <mat-form-field>
+          <input type="text" matInput placeholder="Tipo Producto" #tipoProducto>
         </mat-form-field>
         <button mat-button mat-flat-button color="primary" style="display:block; width:100%;">
           Guardar

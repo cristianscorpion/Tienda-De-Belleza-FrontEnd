@@ -11,7 +11,7 @@ import { MatTableDataSource, MatPaginator } from '@angular/material';
 export class ProductosComponent implements OnInit {
 
   productos:Producto[] = [];
-  displayedColumns = ['codigoProducto', 'nombreProducto', 'nombreBodega'];
+  displayedColumns = ['codigoProducto', 'nombreProducto', 'nombreBodega','precioProducto', 'unidadesDisponibles', 'tipoProducto'];
 
   constructor(public productosService:ProductosService) { }
   dataSource = new MatTableDataSource();

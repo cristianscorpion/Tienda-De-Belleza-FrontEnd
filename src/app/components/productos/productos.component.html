@@ -28,6 +28,21 @@
             <th mat-header-cell *matHeaderCellDef  class="text-center"> Bodega </th>
             <td mat-cell *matCellDef="let element"> {{element.nombreBodega}} </td>
         </ng-container>
+
+        <ng-container matColumnDef="precioProducto">
+            <th mat-header-cell *matHeaderCellDef  class="text-center"> Precio Producto </th>
+            <td mat-cell *matCellDef="let element"> {{element.precioProducto}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="unidadesDisponibles">
+            <th mat-header-cell *matHeaderCellDef  class="text-center"> Unidades Disponibles </th>
+            <td mat-cell *matCellDef="let element"> {{element.unidadesDisponibles}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="tipoProducto">
+            <th mat-header-cell *matHeaderCellDef  class="text-center"> Tipo Producto </th>
+            <td mat-cell *matCellDef="let element"> {{element.tipoProducto}} </td>
+        </ng-container>
     
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
